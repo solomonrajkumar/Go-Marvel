@@ -22,6 +22,7 @@
 		688A2D401E93EE360009B0B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688A2D431E93EE360009B0B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		688A2D451E93EE360009B0B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		688A2D4B1E93F0880009B0B3 /* Avengers.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Avengers.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		688A2D381E93EE360009B0B3 /* Go Marvel */ = {
 			isa = PBXGroup;
 			children = (
+				688A2D4C1E93F0990009B0B3 /* Supporting Files */,
 				688A2D391E93EE360009B0B3 /* AppDelegate.swift */,
 				688A2D3B1E93EE360009B0B3 /* ViewController.swift */,
 				688A2D3D1E93EE360009B0B3 /* Main.storyboard */,
@@ -62,6 +64,14 @@
 				688A2D451E93EE360009B0B3 /* Info.plist */,
 			);
 			path = "Go Marvel";
+			sourceTree = "<group>";
+		};
+		688A2D4C1E93F0990009B0B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				688A2D4B1E93F0880009B0B3 /* Avengers.ttf */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

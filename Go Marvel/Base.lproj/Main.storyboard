@@ -1,26 +1,125 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avengers.ttf">
+            <string>AvengeanceHeroicAvengerItalic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Go_Marvel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Marvel" translatesAutoresizingMaskIntoConstraints="NO" id="bY1-uI-OOv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="142"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MlL-UE-ux1">
+                                <rect key="frame" x="0.0" y="142" width="320" height="45.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Gi2-0J-RAW">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9L-Sb-KzF">
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="46"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Top Videos">
+                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="0.82753232759999995" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkQ-ap-iOP">
+                                                <rect key="frame" x="106.5" y="0.0" width="107" height="46"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Recent">
+                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="0.82753232759999995" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGx-Xk-WIQ">
+                                                <rect key="frame" x="213.5" y="0.0" width="106.5" height="46"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Most Viewed">
+                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="0.82753232759999995" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Gi2-0J-RAW" firstAttribute="height" secondItem="MlL-UE-ux1" secondAttribute="height" id="RIq-lS-6GI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gi2-0J-RAW" secondAttribute="trailing" id="Vor-Zg-LAK"/>
+                                    <constraint firstItem="Gi2-0J-RAW" firstAttribute="top" secondItem="MlL-UE-ux1" secondAttribute="top" id="miK-Db-NWk"/>
+                                    <constraint firstItem="Gi2-0J-RAW" firstAttribute="leading" secondItem="MlL-UE-ux1" secondAttribute="leading" id="oYN-gU-nbc"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qYw-dR-4Pd">
+                                <rect key="frame" x="0.0" y="187" width="320" height="381"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MarvelCell" rowHeight="95" id="0bT-Rw-bAD">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0bT-Rw-bAD" id="9GN-jf-UQU">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ironman" translatesAutoresizingMaskIntoConstraints="NO" id="T2D-vL-aRN">
+                                                    <rect key="frame" x="8" y="0.0" width="86" height="86"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IRON MAN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFO-WR-cpG">
+                                                    <rect key="frame" x="115" y="8" width="197" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerItalic" family="Avengeance Heroic Avenger" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bY1-uI-OOv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="52E-Vr-jZt"/>
+                            <constraint firstItem="MlL-UE-ux1" firstAttribute="top" secondItem="bY1-uI-OOv" secondAttribute="bottom" id="BUN-c4-9xB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qYw-dR-4Pd" secondAttribute="bottom" id="Uek-tO-GW2"/>
+                            <constraint firstItem="qYw-dR-4Pd" firstAttribute="top" secondItem="MlL-UE-ux1" secondAttribute="bottom" id="YLB-Ar-wQE"/>
+                            <constraint firstItem="bY1-uI-OOv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dfn-Xf-xEI"/>
+                            <constraint firstAttribute="trailing" secondItem="bY1-uI-OOv" secondAttribute="trailing" id="eJp-IQ-YaY"/>
+                            <constraint firstItem="MlL-UE-ux1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hsR-Si-uvS"/>
+                            <constraint firstAttribute="trailing" secondItem="qYw-dR-4Pd" secondAttribute="trailing" id="j0h-Az-L16"/>
+                            <constraint firstItem="MlL-UE-ux1" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="j1o-pB-arg"/>
+                            <constraint firstAttribute="trailing" secondItem="MlL-UE-ux1" secondAttribute="trailing" id="khD-fY-4T0"/>
+                            <constraint firstItem="bY1-uI-OOv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mqr-GA-SBU"/>
+                            <constraint firstItem="qYw-dR-4Pd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tn0-at-l9F"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="114.375" y="122.53521126760563"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Marvel" width="2560" height="1440"/>
+        <image name="ironman" width="1024" height="800"/>
+    </resources>
 </document>

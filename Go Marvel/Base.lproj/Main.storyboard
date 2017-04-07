@@ -6,19 +6,20 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Avengers.ttf">
+        <array key="Avenger.otf">
             <string>AvengeanceHeroicAvengerItalic</string>
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Marvel View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Go_Marvel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MarvelViewController" customModule="Go_Marvel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -72,26 +73,40 @@
                                 <rect key="frame" x="0.0" y="187" width="320" height="381"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MarvelCell" rowHeight="95" id="0bT-Rw-bAD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MarvelCell" rowHeight="95" id="0bT-Rw-bAD" customClass="MarvelTableViewCell" customModule="Go_Marvel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0bT-Rw-bAD" id="9GN-jf-UQU">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ironman" translatesAutoresizingMaskIntoConstraints="NO" id="T2D-vL-aRN">
-                                                    <rect key="frame" x="8" y="0.0" width="86" height="86"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ironman" translatesAutoresizingMaskIntoConstraints="NO" id="T2D-vL-aRN">
+                                                    <rect key="frame" x="8" y="5" width="80" height="85.5"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IRON MAN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFO-WR-cpG">
-                                                    <rect key="frame" x="115" y="8" width="197" height="70"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerItalic" family="Avengeance Heroic Avenger" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IRON MAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFO-WR-cpG">
+                                                    <rect key="frame" x="109" y="4.5" width="208" height="85.5"/>
+                                                    <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerItalic" family="Avengeance Heroic Avenger" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="T2D-vL-aRN" firstAttribute="leading" secondItem="9GN-jf-UQU" secondAttribute="leading" constant="8" id="0QG-JA-ik8"/>
+                                                <constraint firstItem="T2D-vL-aRN" firstAttribute="centerY" secondItem="9GN-jf-UQU" secondAttribute="centerY" id="1hk-7V-ESV"/>
+                                                <constraint firstItem="qFO-WR-cpG" firstAttribute="trailing" secondItem="9GN-jf-UQU" secondAttribute="trailingMargin" constant="5" id="4Db-VC-udt"/>
+                                                <constraint firstItem="qFO-WR-cpG" firstAttribute="centerY" secondItem="9GN-jf-UQU" secondAttribute="centerY" id="Z4t-v6-Epz"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="T2D-vL-aRN" firstAttribute="height" secondItem="0bT-Rw-bAD" secondAttribute="height" multiplier="0.9" id="JtX-lI-Hx0"/>
+                                            <constraint firstItem="qFO-WR-cpG" firstAttribute="width" secondItem="0bT-Rw-bAD" secondAttribute="width" multiplier="0.65" id="P8I-aa-Oqu"/>
+                                            <constraint firstItem="qFO-WR-cpG" firstAttribute="height" secondItem="0bT-Rw-bAD" secondAttribute="height" multiplier="0.9" id="Qdc-HO-dgW"/>
+                                            <constraint firstItem="T2D-vL-aRN" firstAttribute="width" secondItem="0bT-Rw-bAD" secondAttribute="width" multiplier="0.25" id="WVs-uG-8yL"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="previewImage" destination="T2D-vL-aRN" id="Kro-SA-pv0"/>
+                                            <outlet property="videoLabel" destination="qFO-WR-cpG" id="tPL-yV-LaT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -112,10 +127,58 @@
                             <constraint firstItem="qYw-dR-4Pd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tn0-at-l9F"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="videoListTableView" destination="qYw-dR-4Pd" id="XK6-sY-9Gw"/>
+                        <segue destination="rLl-VZ-sx5" kind="showDetail" identifier="playVideoSegue" id="vwh-G5-5hE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114.375" y="122.53521126760563"/>
+            <point key="canvasLocation" x="-973" y="75"/>
+        </scene>
+        <!--Play Video View Controller-->
+        <scene sceneID="9N6-Z3-bBd">
+            <objects>
+                <viewController id="rLl-VZ-sx5" customClass="PlayVideoViewController" customModule="Go_Marvel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kju-TU-Cuj"/>
+                        <viewControllerLayoutGuide type="bottom" id="AEc-aF-dfc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sOk-MR-AkS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSH-qh-jzp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="227"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3F-Am-XV1">
+                                <rect key="frame" x="16" y="256" width="288" height="57"/>
+                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerItalic" family="Avengeance Heroic Avenger" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LSH-qh-jzp" firstAttribute="leading" secondItem="sOk-MR-AkS" secondAttribute="leading" id="09A-SD-k9E"/>
+                            <constraint firstItem="LSH-qh-jzp" firstAttribute="height" secondItem="sOk-MR-AkS" secondAttribute="height" multiplier="0.4" id="0aX-OI-8ob"/>
+                            <constraint firstItem="LSH-qh-jzp" firstAttribute="top" secondItem="sOk-MR-AkS" secondAttribute="top" id="1f2-be-Ld6"/>
+                            <constraint firstItem="q3F-Am-XV1" firstAttribute="centerY" secondItem="sOk-MR-AkS" secondAttribute="centerY" id="2lo-oE-ghD"/>
+                            <constraint firstItem="q3F-Am-XV1" firstAttribute="leading" secondItem="sOk-MR-AkS" secondAttribute="leadingMargin" id="5Ky-Ex-K9F"/>
+                            <constraint firstAttribute="trailing" secondItem="LSH-qh-jzp" secondAttribute="trailing" id="Hhn-fm-CoK"/>
+                            <constraint firstItem="q3F-Am-XV1" firstAttribute="height" secondItem="sOk-MR-AkS" secondAttribute="height" multiplier="0.1" id="Uqp-zR-fKO"/>
+                            <constraint firstItem="q3F-Am-XV1" firstAttribute="centerX" secondItem="sOk-MR-AkS" secondAttribute="centerX" id="Yvb-jp-dMI"/>
+                            <constraint firstItem="q3F-Am-XV1" firstAttribute="trailing" secondItem="sOk-MR-AkS" secondAttribute="trailingMargin" id="eXh-Kf-1eh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoTitleLabel" destination="q3F-Am-XV1" id="6DW-Po-64S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jYl-hP-9nP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-180" y="75"/>
         </scene>
     </scenes>
     <resources>

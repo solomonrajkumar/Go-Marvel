@@ -173,6 +173,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="playVideoWebView" destination="LSH-qh-jzp" id="IaT-sK-3OC"/>
                         <outlet property="videoTitleLabel" destination="q3F-Am-XV1" id="6DW-Po-64S"/>
                     </connections>
                 </viewController>

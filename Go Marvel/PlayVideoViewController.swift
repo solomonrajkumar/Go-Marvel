@@ -10,21 +10,29 @@ import UIKit
 
 class PlayVideoViewController: UIViewController {
     
+    
+    @IBOutlet weak var playVideoWebView: UIWebView!
+    
     var _videoTitle: String!
+    var _videoURL: String!
     
     var videoTitle: String {
-        
         get {
-            
             return _videoTitle
-            
         } set {
-            
             _videoTitle = newValue
             
         }
-        
     }
+    
+    var videoURL: String {
+        get {
+            return _videoURL
+        } set {
+            _videoURL = newValue
+        }
+    }
+    
 
     @IBOutlet weak var videoTitleLabel: UILabel!
     
@@ -33,6 +41,13 @@ class PlayVideoViewController: UIViewController {
         super.viewDidLoad()
 
         videoTitleLabel.text = _videoTitle
+        
+        // set the height of the video preview
+        videoURL = _videoURL.replacingOccurrences(of: "webViewHeight", with: "\(playVideoWebView.frame.height)")
+        videoURL = _videoURL.replacingOccurrences(of: "webViewWidth", with: "\(playVideoWebView.frame.width)")
+        print(videoURL)
+        
+        playVideoWebView.loadHTMLString(videoURL, baseURL: nil)
         
     }
 

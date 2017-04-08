@@ -19,7 +19,9 @@ class MarvelViewController: UIViewController, UITableViewDelegate, UITableViewDa
         videoListTableView.dataSource = self
         videoListTableView.delegate = self
         
-        let marvel1 = MarvelModel(imageURL: "ÏmageURL", videoTitle: "Ironman 1 Trailer", videoURL: "VideoUrl")
+        
+         let marvel1 = MarvelModel(imageURL: "ÏmageURL", videoTitle: "Ironman 1 Trailer", videoURL: "<body style=\"margin: 0; padding: 0;\"><iframe width=\"webViewWidth\" height=\"webViewHeight\" src=\"https://www.youtube.com/embed/8hYlB38asDY?&playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>")
+        
         marvels.append(marvel1)
         
     }
@@ -58,6 +60,7 @@ class MarvelViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if let marvelObj = sender as? MarvelModel {
                 
                 destination.videoTitle = marvelObj.videoTitle
+                destination.videoURL = marvelObj.videoURL
                 
             }
             
